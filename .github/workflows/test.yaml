@@ -27,7 +27,7 @@ jobs:
     - name: Run docker-compose
       run: docker-compose up -d
     - name: Run unit tests
-      run: sleep 2m && python -m unittest discover -v
+      run: python -m unittest discover -v
     - name: Stop services
       run: docker rm -f $(docker ps -aq)
 
